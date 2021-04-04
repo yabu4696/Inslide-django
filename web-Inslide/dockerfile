@@ -43,3 +43,4 @@ WORKDIR /workspace
 
 COPY . /workspace
 
+# ENTRYPOINT ["/workspace/entrypoint.sh"]
