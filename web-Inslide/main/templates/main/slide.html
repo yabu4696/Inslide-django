@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/slick-theme.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/slick.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/main.css' %}">
+</head>
+
+<body>
+    <div class='slider'>
+        {% for url in media_url_list %}
+        <div><img data-lazy={{ url }}></div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'main:index' %}" class="previous">☒</a>
+    <div class="line"><div id="clock"></div></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'main/js/slick.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'main/js/main.js' %}"></script>
+</body>
+
+</html>

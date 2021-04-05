@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    height:100vh;
+    position: relative;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 100%;
+}
+.slider img{
+    max-height:100vh;
+    width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+.previous {
+    position: absolute;
+    top:-3px;
+    left:2px;
+    text-decoration: none;
+    color: #989898;
+}
+
+#clock{
+    font-size: 13vw;
+    position: absolute;
+    top: 34%;
+    left: 17%;
+    font-family: 'Train One', cursive;
+    /* color: #9898982f; */
+    opacity: .6;
+    filter: invert(100%) grayscale(100%) contrast(60);
+    border: double 10px;
+}
+
+/*slick setting*/
+.slick-prev:before,
+.slick-next:before {
+    color: #000;
+}
